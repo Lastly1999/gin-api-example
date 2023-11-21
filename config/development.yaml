@@ -1,0 +1,59 @@
+application:
+  name: "gin-api-example-dev"
+  version: "1.0.0"
+  port: 8080
+  apiPrefix: v1
+# 后台jwt配置
+jwt:
+  expireTime: 3600
+  secret: "45QXsNssYWTpXNxIJ6TdlaWEm0Cv6KOxkBER"
+# 小程序jwt配置
+wxJwt:
+  expireTime: 3600
+  secret: "srlwG0SY3SPME1tg4mphfABol0RgRravpqe0"
+# mysql配置
+mysql:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: "123456"
+  db: "enterprise_db"
+# redis配置
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+# 日志配置
+zap:
+  level: 'info' #日志级别
+  format: 'console' #输出的级别，有console和json
+  prefix: '[gin-service]' #输出的前缀，[catering]xxxxxxxxxxx
+  director: 'log' #存放的文件夹
+  show-line: true #是否显示行号
+  encode-level: 'CapitalColorLevelEncoder' #编码级别,目前支持四种LowercaseLevelEncoder，LowercaseColorLevelEncoder，CapitalLevelEncoder，CapitalColorLevelEncoder
+  stacktrace-key: 'stacktrace' #栈名
+  log-in-console: true #输出控制台
+# 阿里云配置
+aliyun:
+  # 阿里云短信配置
+  sms:
+    accessKeyId: ""
+    accessKeySecret: ""
+    signName: ""
+    templateCode: ""
+    # https://api.aliyun.com/product/Dysmsapi 地区
+    endpoint: "dysmsapi.aliyuncs.com"
+  oss:
+    accessKeyId: ""
+    accessKeySecret: ""
+    endpoint: ""
+    bucket: ""
+# powerwechat配置
+powerwechat:
+  # 小程序配置
+  miniprogram:
+    appid:
+    secret:
+    httpDebug: true
+    debug: false
